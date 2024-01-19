@@ -1,17 +1,41 @@
-import React from "react";
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from "./Ventanas/Login";
+import Register from './Ventanas/Register';
 import RecuperarContrasena from "./pantallas/recuperarContrasena";
 import styles from './estilos/estilos'
 import { View } from "react-native";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
 
-  return (
-    <View style = {styles.container}>
-      <RecuperarContrasena />
-    </View>
-
+function App(){
+  return( 
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name='Login'
+          component={Login}
+        ></Stack.Screen>
+        <Stack.Screen name='Register' component={Register}/>
+        <Stack.Screen name='RecuperarContrasena' component={RecuperarContrasena}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+export default App;
+
+
+
+// export default function App() {
+
+//   return (
+//     <View style = {styles.container}>
+//       <RecuperarContrasena />
+//     </View>
+
+//   );
+// }
 
 // const styles = StyleSheet.create({
 //   container: {
