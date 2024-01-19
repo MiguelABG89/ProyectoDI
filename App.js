@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from "./Ventanas/Login";
 import Register from './Ventanas/Register';
+import RecuperarContrasena from "./pantallas/recuperarContrasena";
+import styles from './estilos/estilos'
 
 const Stack = createNativeStackNavigator();
 
@@ -15,9 +17,9 @@ function App(){
           component={Login}
         ></Stack.Screen>
         <Stack.Screen name='Register' component={Register}/>
+        <Stack.Screen name='RecuperarContrasena' component={RecuperarContrasena}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 export default App;
-
