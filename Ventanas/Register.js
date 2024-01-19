@@ -37,7 +37,7 @@ function Register() {
                     setMensajePasswordInvalida('')
                     setMensajePasswordDiferentes('')
 
-                    {/*  */}
+                    {/* */}
                     if (user.trim() === '' || password.trim() === '' || password2.trim() === '') {
                         setMensajeCamposVacios('Uno o más campos estan vacios')
                     } else if (password.length < 6) {
