@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from "./Ventanas/Login";
 import Register from './Ventanas/Register';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Register/>
-    </View>
+const Stack = createNativeStackNavigator();
+
+function App(){
+  return( 
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name='Login'
+          component={Login}
+          options={{title:'hola'}}
+        ></Stack.Screen>
+        <Stack.Screen name='Registar' component={Register}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
