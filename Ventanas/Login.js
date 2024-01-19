@@ -22,7 +22,7 @@ function Login({ navigation }) {
             <Text onPress={() => navigation.navigate('Registar', { name: 'Registar' })}>He olvidado mi contraseña</Text> 
             <Button title="iniciar sesion" onPress={()=>Alert.alert('Pagina de inicio')}></Button>
             <Text>¿Necesitas una cuenta?</Text>
-           <Text onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text> 
+           <Text style={{color:'blue'}} onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text> 
            {/**Tienes que buscar como hacer el estilo del Registrar */}
         </SafeAreaView>
     );
