@@ -14,15 +14,32 @@ function Register() {
     return (
         <View>
             {/* LOGO AQUI */}
-            <TextInput style={styles.input} onChangeText={setUser} value={user} placeholder="Usuario"/>
+            <TextInput 
+                style={styles.input} 
+                onChangeText={setUser}
+                value={user} 
+                placeholder="Usuario"
+            />
             <Text></Text>
 
             {/* Boton para ocultar */}
-            <TextInput style={styles.input} onChangeText={setPassword} value={password} secureTextEntry={true} placeholder="Contraseña"/>
+            <TextInput
+                style={styles.input}
+                onChangeText={setPassword}
+                value={password}
+                secureTextEntry={true}
+                placeholder="Contraseña"
+            />
             <Text style={{color:'red'}}>{mensajePasswordInvalida}</Text>
 
             {/* Boton para ocultar */}
-            <TextInput style={styles.input} onChangeText={setPassword2} value={password2} secureTextEntry={true} placeholder="Confirmar contraseña"/>
+            <TextInput
+                style={styles.input}
+                onChangeText={setPassword2}
+                value={password2}
+                secureTextEntry={true}
+                placeholder="Confirmar contraseña"
+            />
             <Text style={{color:'red'}}>{mensajePasswordDiferentes}</Text>
 
             <Button
