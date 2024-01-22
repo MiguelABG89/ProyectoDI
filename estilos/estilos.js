@@ -21,6 +21,12 @@ const styles = {
         textAlign: "center",
     },
 
+    linkableText: {
+        color: "#0047b3"
+    },
+
+   
+
     container: {
         flex: 1,
         flexDirection: "column",
