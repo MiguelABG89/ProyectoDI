@@ -12,7 +12,7 @@ function Register() {
 
 
     return (
-        <View>
+        <View testID='Register-screen'>
             {/* LOGO AQUI */}
             <TextInput style={styles.input} onChangeText={setUser} value={user} placeholder="Usuario"/>
             <Text></Text>

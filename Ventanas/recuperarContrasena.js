@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, View, TextInput, TouchableOpacity, Alert, Text } from "react-native";
-import Icon from 'react-native-vector-icons/Ionicons';
 import styles from '../estilos/estilos'
+
 const RecuperarContrasena = () => {
     const [text, onChangeText] = React.useState('');
 
@@ -19,7 +19,7 @@ const RecuperarContrasena = () => {
 
         // TODO boton flotante navegación <--
 
-        <View>
+        <View testID="RecuperarContrasena-screen">
 
             <TouchableOpacity onPress={handleBackPress} style={styles.backButton}>
                 <Icon name="arrow-back" size={30} color="#ec5f28" />

@@ -25,19 +25,7 @@ const styles = {
         color: "#0047b3"
     },
 
-   
 
-    container: {
-        flex: 1,
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-around",
-        backgroundColor: "lavender",
-        ...Platform.select({
-            ios: { paddingTop: 20 },
-            android: { paddingTop: StatusBar.currentHeight }
-        })
-    },
 };
 
 export default styles;
