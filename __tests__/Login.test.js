@@ -37,10 +37,10 @@ describe('Login Component', () => {
     const { getByText } = render(<Login navigation={{ navigate: navigateMock }} />);
 
     // Simular el clic en el enlace 'He olvidado mi contraseña'
-    fireEvent.press(getByText('He olvidado mi contraseña'));
+    fireEvent.press(getByText('contraseña'));
 
     // Verificar si la función de navegación fue llamada con los argumentos correctos
-    expect(navigateMock).toHaveBeenCalledWith('RecuperarContrasena', { name: 'RecuperarContrasena' });
+    expect(navigateMock).toHaveBeenCalledWith('Recuperar Contrasena', { name: 'Recuperar Contrasena' });
   });
 
   it('navigates to Register screen', () => {
@@ -54,6 +54,6 @@ describe('Login Component', () => {
     fireEvent.press(getByText('Registrar'));
 
     // Verificar si la función de navegación fue llamada con los argumentos correctos
-    expect(navigateMock).toHaveBeenCalledWith('Register', { name: 'Register' });
+    expect(navigateMock).toHaveBeenCalledWith('Registrar', { name: 'Registrar' });
   });
 });

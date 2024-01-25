@@ -16,7 +16,7 @@ function App() {
           component={Login}
         ></Stack.Screen>
         <Stack.Screen name='Registrar' component={Register} />
-        <Stack.Screen name='Recuperar Contrasena' component={RecuperarContrasena} />
+        <Stack.Screen name='Recuperar Contraseña' component={RecuperarContrasena} />
       </Stack.Navigator>
     </NavigationContainer>
   );
