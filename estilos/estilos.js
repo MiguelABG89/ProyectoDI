@@ -46,8 +46,14 @@ const styles = {
     },
 
     buttons: {
-        color: "#ec5f28"
+        color: "#ec5f28",
+        borderRadius: 10
     },
+
+    errors: {
+        color: 'red',
+        textAlign: "center"
+    }
 
     // container: {
     //     flex: 1,

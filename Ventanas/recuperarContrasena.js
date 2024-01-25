@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, View, TextInput, Image, Alert, Text } from "react-native";
+import { Button, View, TextInput, Image, Alert, Text, TouchableOpacity } from "react-native";
 import styles from '../estilos/estilos'
 const RecuperarContrasena = () => {
     const [text, onChangeText] = React.useState('');
@@ -28,7 +28,6 @@ const RecuperarContrasena = () => {
                 placeholder="Correo electrónico"
             />
 
-
             <Button
                 color={styles.buttons.color}
                 title="Recuperar contraseña"
@@ -36,6 +35,7 @@ const RecuperarContrasena = () => {
                     Alert.alert('Se ha enviado un correo a la siguiente dirección:', `${text}`);
                 }}
             />
+
         </View>
 
     );
