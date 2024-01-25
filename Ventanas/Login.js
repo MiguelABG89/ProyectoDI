@@ -39,14 +39,12 @@ function Login({ navigation }) {
 
             <Button
                 color={styles.buttons.color}
-                title="iniciar sesion"
+                title="iniciar sesión"
                 onPress={() => Alert.alert('Navegación --> Pagina de inicio')} />
 
             <Text style={styles.text}>¿Necesitas una cuenta?</Text>
 
             <Text style={styles.linkableText} onPress={() => navigation.navigate('Registrar', { name: 'Registrar' })}>Registrar</Text>
-
-            {/**Tienes que buscar como hacer el estilo del Registrar */}
 
         </SafeAreaView>
     );
