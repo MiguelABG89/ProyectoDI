@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, View, TextInput, Image, Alert, Text, TouchableOpacity } from "react-native";
 import styles from '../estilos/estilos'
+
 const RecuperarContrasena = () => {
     const [text, onChangeText] = React.useState('');
 
