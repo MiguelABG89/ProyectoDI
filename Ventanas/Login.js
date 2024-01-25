@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, Button, TextInput, Alert } from "react-native";
+import { SafeAreaView, Text, Button, TextInput, Alert, Image } from "react-native";
 import styles from '../estilos/estilos'
 
 function Login({ navigation }) {
@@ -8,30 +8,44 @@ function Login({ navigation }) {
 
     return (
         <SafeAreaView style={styles.estructure}>
+
+            <Image
+                source={require('../assets/Logo-FDP.jpg')} // Ajusta la ruta según la ubicación de tu imagen
+                style={styles.image}
+            />
+
             <TextInput
                 style={styles.inputs}
                 onChangeText={onChangeUsu}
                 value={Usu}
-                placeholder = "Usuario"
+                placeholder="Correo electrónico"
             />
+
             <TextInput
                 style={styles.inputs}
                 onChangeText={onChangePwd}
                 value={pwd}
                 placeholder="Contraseña"
-            
+
             />
-            <Text onPress={() => navigation.navigate('RecuperarContrasena', { name: 'RecuperarContrasena' })}>
-                He olvidado mi contraseña
+
+            <Text style={styles.text}>
+                He olvidado mi{" "}
+                <Text style={styles.linkableText} onPress={() => navigation.navigate('RecuperarContrasena', { name: 'RecuperarContrasena' })}>
+                    contraseña
+                </Text>
             </Text>
 
 
-            <Button title="iniciar sesion" onPress={() => Alert.alert('Navegación --> Pagina de inicio')} />
+            <Button
+                color={styles.buttons.color}
+                title="iniciar sesion"
+                onPress={() => Alert.alert('Navegación --> Pagina de inicio')} />
 
-            <Text>¿Necesitas una cuenta?</Text>
+            <Text style={styles.text}>¿Necesitas una cuenta?</Text>
 
             <Text style={styles.linkableText} onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text>
-            
+
             {/**Tienes que buscar como hacer el estilo del Registrar */}
 
         </SafeAreaView>
