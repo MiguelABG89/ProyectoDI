@@ -11,5 +11,53 @@
       "StackId": "arn:aws:cloudformation:us-east-1:336722522156:stack/amplify-proyectodireact-dev-114215/6a056840-bb6e-11ee-8a55-123cdbef3469",
       "AmplifyAppId": "dldd3ked8b63o"
     }
+  },
+  "auth": {
+    "ProyectoDIReact": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-1_fjdbxzdbl",
+        "AppClientIDWeb": "6mgpbavb0r7cj6qc352tv3lstk",
+        "AppClientID": "7aep3pn7a7m5amaa1ut69qtv96",
+        "IdentityPoolId": "us-east-1:a52b3954-d8ae-4032-94cc-1557d42863bc",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:336722522156:userpool/us-east-1_fjdbxzdbl",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "ProyectoDIReact"
+      },
+      "lastPushTimeStamp": "2024-01-25T13:29:40.626Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-proyectodireact-dev-114215-deployment/amplify-cfn-templates/auth/ProyectoDIReact-cloudformation-template.json",
+        "logicalId": "authProyectoDIReact"
+      }
+    }
   }
 }
