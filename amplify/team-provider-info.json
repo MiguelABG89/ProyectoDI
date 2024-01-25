@@ -10,6 +10,11 @@
       "StackName": "amplify-proyectodireact-dev-114215",
       "StackId": "arn:aws:cloudformation:us-east-1:336722522156:stack/amplify-proyectodireact-dev-114215/6a056840-bb6e-11ee-8a55-123cdbef3469",
       "AmplifyAppId": "dldd3ked8b63o"
+    },
+    "categories": {
+      "auth": {
+        "ProyectoDIReact": {}
+      }
     }
   }
 }
