@@ -1,39 +1,55 @@
 import React from "react";
-import { SafeAreaView,Text, Button, StyleSheet, TextInput, Alert } from "react-native";
+import { SafeAreaView, Text, Button, TextInput, Alert, Image } from "react-native";
+import styles from '../estilos/estilos'
 
 function Login({ navigation }) {
     const [Usu, onChangeUsu] = React.useState('');
     const [pwd, onChangePwd] = React.useState('');
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.estructure}>
+
+            <Image
+                source={require('../assets/Logo-FDP.jpg')} // Ajusta la ruta según la ubicación de tu imagen
+                style={styles.image}
+            />
+
             <TextInput
-                style={styles.input}
+                style={styles.inputs}
                 onChangeText={onChangeUsu}
                 value={Usu}
+                placeholder="Correo electrónico"
             />
+
             <TextInput
-                style={styles.input}
+                style={styles.inputs}
                 onChangeText={onChangePwd}
                 value={pwd}
-                placeholder="useless placeholder"
-                keyboardType="numeric"
+                placeholder="Contraseña"
+
             />
-            <Text onPress={() => navigation.navigate('Registar', { name: 'Registar' })}>He olvidado mi contraseña</Text> 
-            <Button title="iniciar sesion" onPress={()=>Alert.alert('Pagina de inicio')}></Button>
-            <Text>¿Necesitas una cuenta?</Text>
-           <Text style={{color:'blue'}} onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text> 
-           {/**Tienes que buscar como hacer el estilo del Registrar */}
+
+            <Text style={styles.text}>
+                He olvidado mi{" "}
+                <Text style={styles.linkableText} onPress={() => navigation.navigate('RecuperarContrasena', { name: 'RecuperarContrasena' })}>
+                    contraseña
+                </Text>
+            </Text>
+
+
+            <Button
+                color={styles.buttons.color}
+                title="iniciar sesion"
+                onPress={() => Alert.alert('Navegación --> Pagina de inicio')} />
+
+            <Text style={styles.text}>¿Necesitas una cuenta?</Text>
+
+            <Text style={styles.linkableText} onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text>
+
+            {/**Tienes que buscar como hacer el estilo del Registrar */}
+
         </SafeAreaView>
     );
 }
-const styles = StyleSheet.create({
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-    },
-});
 
 export default Login;

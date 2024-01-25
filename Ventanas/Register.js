@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { StyleSheet, Text, TextInput, View, Button, Alert } from 'react-native';
+import { Text, TextInput, View, Button, Alert } from 'react-native';
+import styles from '../estilos/estilos'
+
 
 function Register() {
     const [user, setUser] = useState("")
@@ -12,35 +14,18 @@ function Register() {
 
 
     return (
-        <View>
+        <View style={styles.estructure}>
             {/* LOGO AQUI */}
-            <TextInput 
-                style={styles.input} 
-                onChangeText={setUser}
-                value={user} 
-                placeholder="Usuario"
-            />
-            <Text></Text>
+
+            <TextInput style={styles.inputs} onChangeText={setUser} value={user} placeholder="Usuario"/>
 
             {/* Boton para ocultar */}
-            <TextInput
-                style={styles.input}
-                onChangeText={setPassword}
-                value={password}
-                secureTextEntry={true}
-                placeholder="Contraseña"
-            />
-            <Text style={{color:'red'}}>{mensajePasswordInvalida}</Text>
+            <TextInput style={styles.inputs} onChangeText={setPassword} value={password} secureTextEntry={true} placeholder="Contraseña"/>
+            <Text style={styles.errors}>{mensajePasswordInvalida}</Text>
 
             {/* Boton para ocultar */}
-            <TextInput
-                style={styles.input}
-                onChangeText={setPassword2}
-                value={password2}
-                secureTextEntry={true}
-                placeholder="Confirmar contraseña"
-            />
-            <Text style={{color:'red'}}>{mensajePasswordDiferentes}</Text>
+            <TextInput style={styles.inputs} onChangeText={setPassword2} value={password2} secureTextEntry={true} placeholder="Confirmar contraseña"/>
+            <Text style={styles.errors}>{mensajePasswordDiferentes}</Text>
 
             <Button
                 onPress={() => {
@@ -64,21 +49,12 @@ function Register() {
                     }
                 }}
                 title='Registrarse'
-                color="#485124"
                 accessibilityLabel='Registrarse'
+                color={styles.buttons.color}
             />
-            <Text style={{color:'red'}}>{"\n"+mensajeCamposVacios}</Text>
+            <Text style={styles.errors}>{"\n"+mensajeCamposVacios}</Text>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-    }
-});
 
 export default Register
