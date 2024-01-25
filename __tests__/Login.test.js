@@ -10,7 +10,7 @@ describe('Login Component', () => {
     expect(getByPlaceholderText('Usuario')).toBeTruthy();
     expect(getByPlaceholderText('Contraseña')).toBeTruthy();
     expect(getByText('He olvidado mi contraseña')).toBeTruthy();
-    expect(getByText('iniciar sesion')).toBeTruthy();
+    expect(getByText('iniciar sesión')).toBeTruthy();
     expect(getByText('¿Necesitas una cuenta?')).toBeTruthy();
     expect(getByText('Registrar')).toBeTruthy();
   });
