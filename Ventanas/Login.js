@@ -31,7 +31,7 @@ function Login({ navigation }) {
 
             <Text style={styles.text}>
                 He olvidado mi{" "}
-                <Text style={styles.linkableText} onPress={() => navigation.navigate('RecuperarContrasena', { name: 'RecuperarContrasena' })}>
+                <Text style={styles.linkableText} onPress={() => navigation.navigate('Recuperar Contrasena', { name: 'Recuperar Contrasena' })}>
                     contraseña
                 </Text>
             </Text>
@@ -44,7 +44,7 @@ function Login({ navigation }) {
 
             <Text style={styles.text}>¿Necesitas una cuenta?</Text>
 
-            <Text style={styles.linkableText} onPress={() => navigation.navigate('Register', { name: 'Register' })}>Registrar</Text>
+            <Text style={styles.linkableText} onPress={() => navigation.navigate('Registrar', { name: 'Registrar' })}>Registrar</Text>
 
             {/**Tienes que buscar como hacer el estilo del Registrar */}
 

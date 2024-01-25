@@ -12,11 +12,11 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Login'
+          name='Inicio'
           component={Login}
         ></Stack.Screen>
-        <Stack.Screen name='Register' component={Register} />
-        <Stack.Screen name='RecuperarContrasena' component={RecuperarContrasena} />
+        <Stack.Screen name='Registrar' component={Register} />
+        <Stack.Screen name='Recuperar Contrasena' component={RecuperarContrasena} />
       </Stack.Navigator>
     </NavigationContainer>
   );
