@@ -7,7 +7,7 @@ describe('Login Component', () => {
     const { getByPlaceholderText, getByText, getByTestId } = render(<Login />);
 
     // Verifica que los elementos importantes estén presentes en el componente
-    expect(getByPlaceholderText('Usuario')).toBeTruthy();
+    expect(getByPlaceholderText('Correo electrónico')).toBeTruthy();
     expect(getByPlaceholderText('Contraseña')).toBeTruthy();
     expect(getByText('He olvidado mi contraseña')).toBeTruthy();
     expect(getByText('iniciar sesión')).toBeTruthy();
@@ -18,7 +18,7 @@ describe('Login Component', () => {
   it('updates state on input change', () => {
     const { getByPlaceholderText } = render(<Login />);
 
-    const usuarioInput = getByPlaceholderText('Usuario');
+    const usuarioInput = getByPlaceholderText('Correo electrónico');
     const passwordInput = getByPlaceholderText('Contraseña');
 
     fireEvent.changeText(usuarioInput, 'usuario123');
@@ -40,10 +40,10 @@ describe('Login Component', () => {
     fireEvent.press(getByText('He olvidado mi contraseña'));
 
     // Verificar si la función de navegación fue llamada con los argumentos correctos
-    expect(navigateMock).toHaveBeenCalledWith('RecuperarContrasena', { name: 'RecuperarContrasena' });
+    expect(navigateMock).toHaveBeenCalledWith('Recuperar Contrasena', { name: 'Recuperar Contrasena' });
   });
 
-  it('navigates to RecuperarContrasena screen', () => {
+  it('navigates to Register screen', () => {
     // Mock de la función navigate
     const navigateMock = jest.fn();
 
@@ -54,6 +54,6 @@ describe('Login Component', () => {
     fireEvent.press(getByText('Registrar'));
 
     // Verificar si la función de navegación fue llamada con los argumentos correctos
-    expect(navigateMock).toHaveBeenCalledWith('Register', { name: 'Register' });
+    expect(navigateMock).toHaveBeenCalledWith('Registrar', { name: 'Registrar' });
   });
 });
