@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Text, TextInput, View, Button, Alert, Image, navigation, ModalDropdown } from 'react-native';
+import { Text, TextInput, View, Button, Alert, Image, navigation } from 'react-native';
+import ModalDropdown from 'react-native-modal-dropdown';
 import styles from '../estilos/estilos'
 
 
@@ -29,7 +30,7 @@ function Register() {
             case 'Français':
                 navigation.navigate('frenchRegister')
             default:
-                navigation.navigate('RegisterEspanol'); // Por defecto, regresa a Español
+                navigation.navigate('Register'); // Por defecto, regresa a Español
         }
     };
 
@@ -43,18 +44,16 @@ function Register() {
         />
 
             <Image
-                source={require('../assets/Logo-FDP.jpg')} // Ajusta la ruta según la ubicación de tu imagen
+                source={require('../assets/Logo-FDP.jpg')}
                 style={styles.image}
             />
 
             <TextInput style={styles.inputs} onChangeText={setUser} value={user} placeholder="Usuario"/>
 
             <TextInput style={styles.inputs} onChangeText={setPassword} value={password} secureTextEntry={true} placeholder="Contraseña"/>
-            {/* Solo se muestra el mensaje de error si se cumplen las condiciones */}
             {mensajePasswordInvalida !== "" && <Text style={styles.errors}>{mensajePasswordInvalida}</Text>}
 
             <TextInput style={styles.inputs} onChangeText={setPassword2} value={password2} secureTextEntry={true} placeholder="Confirmar contraseña"/>
-            {/* Solo se muestra el mensaje de error si se cumplen las condiciones */}
             {mensajePasswordDiferentes != "" && <Text style={styles.errors}>{mensajePasswordDiferentes}</Text>}
 
             <Button
