@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Text, TextInput, View, Button, Alert, Image, navigation } from 'react-native';
-import ModalDropdown from 'react-native-modal-dropdown';
+import { Text, TextInput, View, Button, Alert, Image, navigation, ModalDropdown } from 'react-native';
 import styles from '../estilos/estilos'
 
 
@@ -22,13 +21,13 @@ function Register() {
         // Navegar al componente correspondiente al idioma seleccionado
         switch (value) {
             case 'Español':
-                navigation.navigate('RegisterEspanol');
+                navigation.navigate('Register');
                 break;
             case 'English':
-                navigation.navigate('RegisterEnglish');
+                navigation.navigate('englishRegister');
                 break;
             case 'Français':
-                navigation.navigate('RegisterFrancais')
+                navigation.navigate('frenchRegister')
             default:
                 navigation.navigate('RegisterEspanol'); // Por defecto, regresa a Español
         }
